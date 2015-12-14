@@ -1,5 +1,5 @@
 # eedomus_getOuvertures
-Obtenir l'état des ouvertures sous forme XML
+Obtenir l'état des ouvertures sous forme XML pour la box domotique eedomus
 
 Le script php suivant donne l'état des différentes ouvertures de la maison, et construit un message qui pourra être lu vocalement 
 à votre guise.
