@@ -5,15 +5,21 @@ Le script php suivant donne l'état des différentes ouvertures de la maison, et
 à votre guise.
 
 1/ Il vous faut au préalable mettre vos codes API, et modifier le tableau des ouvertures pour chacun des cas de votre habitat
+
 2/ Le script est au format PHP pour serveur classique (testé sur synology), il doit bien y avoir un bon samaritain 
 qui doit pouvoir le mettre à jour pour qu'il fonctionne au sein des scripts eedomus directement. A mon avis, il y a peu de changement.
+
 3/ Cela génère un xml, il vous faut donc créer un capteur http, avec l'appel au script http://IP/getOuvertures.php, 
 et le XPATH /OUVERTURES/MESSAGE pour avoir le message donc
+
 4/ Mettez une mise à jour à 0 mn pour ce capteur http
+
 5/ Créez une règle qui, à chaque fois qu'une de vos ouvertures devient ouverte ou fermée, met à jour le capteur http. 
 Ainsi, à chaque changement d'état, le message indique ce qui est ouvert, précisément.
+
 6/ Pour ceux qui ont un test à faire lors d'un armement alarme ou autre, il suffit de tester si au moins une des ouvertures est ouverte, 
 et si oui, vous pouvez faire lire le message du capteur http.
+
 7/ Si vous utilisez le bloc-notes, pensez à enregistrer le fichier php en encodage UTF-8
 
 Si les accents sont mal encodés (Serveur Raspberry PI), remplacer la première ligne par :
