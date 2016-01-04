@@ -1,4 +1,6 @@
 # eedomus_getOuvertures
+Script pour serveur déporté : getOuvertures.php
+
 Obtenir l'état des ouvertures sous forme XML pour la box domotique eedomus
 
 Le script php suivant donne l'état des différentes ouvertures de la maison, et construit un message qui pourra être lu vocalement 
@@ -25,8 +27,9 @@ et si oui, vous pouvez faire lire le message du capteur http.
 Si les accents sont mal encodés (Serveur Raspberry PI), remplacer la première ligne par :
 $xml = "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>";
 
+Script intégrable eedomus : EtatOuverture.php
 
-La version EtatOuvertures.php est un script identique intégrable directement au coeur de l'eedomus (version initiale modifée par Madoma73). 
+La version EtatOuverture.php est un script identique intégrable directement au coeur de l'eedomus (version initiale modifiée par Madoma73). 
 
 Dans le champ URL, cette version du script peut être appeler de deux manières différentes
 soit: 
