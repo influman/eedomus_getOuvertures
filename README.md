@@ -24,3 +24,13 @@ et si oui, vous pouvez faire lire le message du capteur http.
 
 Si les accents sont mal encodés (Serveur Raspberry PI), remplacer la première ligne par :
 $xml = "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>";
+
+
+La version EtatOuvertures.php est un script identique intégrable directement au coeur de l'eedomus (version initiale modifée par Madoma73). 
+
+Dans le champ URL, cette version du script peut être appeler de deux manières différentes
+soit: 
+- http://localhost/script/?exec=EtatOuverture.php&periphIds=1,2,3
+- http://localhost/script/?exec=EtatOuverture.php&periphIds=1,2,3&resultPeriphId=4
+
+la deuxième manière nécessitant de créer un nouveau périphérique de type état (usage détecteur d'ouverture) qui permet de faire des règles plus faciles à mon goût, ce périphérique est "ouvert" si au moins des portes déclarées l'est et fermé sinon.
